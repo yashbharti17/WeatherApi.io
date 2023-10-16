@@ -23,14 +23,6 @@ export const fetchData = function(URL,callback){
 //     reverseGeo(lat,lon){
 //         return `http://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5`
 //     },
-    /**
-     * 
-     * @param {string} query  search query eg : "London", "DElhi"
-     */
-    geo(query) {
-        return `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${api_key}`;
-      }
-}
 export const url = {
     currentWeather(lat, lon) {
       return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`;
@@ -44,6 +36,12 @@ export const url = {
     reverseGeo(lat, lon) {
       return `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${api_key}`;
     },
-    
+     /**
+     * 
+     * @param {string} query  search query eg : "London", "DElhi"
+     */
+    geo(query) {
+        return `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${api_key}`;
+      }
   };
   
