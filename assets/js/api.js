@@ -5,7 +5,7 @@ const api_key='8c5f131d2561a9b71b629ed765068946';
 * @param {Function} callback callback
 */
 export const fetchData = function(URL,callback){
-    fetch(`${URL}&appid=${api_key}`)
+    fetch(`${URL}`)
     .then(res => res.json())
     .then(data => callback(data));
 }
